@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-500 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">User Settings</h1>
+            <div class="flex space-x-4">
+                <a href="dashboard.html" class="hover:underline">Dashboard</a>
+                <a href="team.html" class="hover:underline">Team</a>
+                <a href="projects.html" class="hover:underline">Projects</a>
+                <a href="tasks.html" class="hover:underline">Tasks</a>
+                <a href="user-settings.html" class="hover:underline font-bold">Settings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4">
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-6">Account Settings</h2>
+                
+                <!-- Profile Section -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-4 border-b pb-2">Profile Information</h3>
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                             class="h-16 w-16 rounded-full border-2 border-blue-500 mr-4">
+                        <div>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg mr-2">
+                                Change Photo
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                            <input type="text" value="John" class="border p-2 rounded w-full">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                            <input type="text" value="Doe" class="border p-2 rounded w-full">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" value="john.doe@example.com" class="border p-2 rounded w-full">
+                    </div>
+                </div>
+
+                <!-- Preferences Section -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-4 border-b pb-2">Preferences</h3>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Theme</label>
+                        <div class="flex space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="theme" checked class="h-4 w-4 text-blue-500">
+                                <span class="ml-2">Light</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="theme" class="h-4 w-4 text-blue-500">
+                                <span class="ml-2">Dark</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="theme" class="h-4 w-4 text-blue-500">
+                                <span class="ml-2">System</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
+                        <select class="border p-2 rounded w-full">
+                            <option>(UTC-05:00) Eastern Time</option>
+                            <option>(UTC-06:00) Central Time</option>
+                            <option>(UTC-07:00) Mountain Time</option>
+                            <option>(UTC-08:00) Pacific Time</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Notifications Section -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-4 border-b pb-2">Notifications</h3>
+                    <div class="space-y-4">
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" checked class="h-4 w-4 text-blue-500">
+                            <span>Email notifications</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" checked class="h-4 w-4 text-blue-500">
+                            <span>Push notifications</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="h-4 w-4 text-blue-500">
+                            <span>Weekly reports</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 border-b pb-2 text-red-500">Danger Zone</h3>
+                    <div class="space-y-4">
+                        <button class="bg-red-100 hover:bg-red-200 text-red-800 px-4 py-2 rounded-lg">
+                            <i class="fas fa-sign-out-alt mr-2"></i> Logout
+                        </button>
+                        <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">
+                            <i class="fas fa-trash-alt mr-2"></i> Delete Account
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="mt-8">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg w-full md:w-auto">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
